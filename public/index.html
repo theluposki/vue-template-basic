@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>VueJs Basic Template</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <navigation></navigation>
+            <h1>{{ titulo }}</h1>
+            <router-view></router-view>
+        </div>
+    </div>
+
+
+
+    <!-- templates Componets -->
+    <template id="navigation">
+        <div>
+            <nav class="nav">
+                <div class="nav-logo">
+                    Vuejs
+                </div>
+                <div class="nav-links">
+                    <router-link to="/" class="nav-link" active-class="nav-link-active" exact>Home</router-link>
+                    <router-link to="/info" class="nav-link" active-class="nav-link-active" exact>Info</router-link>
+                </div>
+            </nav>
+        </div>
+    </template>
+    <!-- /templates Componets -->
+
+    <!-- templates Routes -->
+    <template id="home">
+        <div>
+            Home
+        </div>
+    </template>
+
+    <template id="info">
+        <div>
+            info
+        </div>
+    </template>
+    <!-- /templates Routes -->
+
+
+    <script src="js/dexie.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-router.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
